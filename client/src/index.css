@@ -1,0 +1,62 @@
+@import url('https://fonts.cdnfonts.com/css/futura-condensed-pt');
+
+* {
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 400;
+  text-decoration: none !important;
+  scroll-behavior: smooth;
+}
+.layout-container {
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+.banner {
+  background-image: url('Rectangle 3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pad {
+  justify-content: flex-end;
+}
+
+.btnTwenty{
+  width: 100% !important;
+}
+
+.imgFifty{
+  width: 100% !important;
+}
+
+@media screen and (max-width: 600px) {
+  .pad{
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .banner {
+      background-image: url('Rectangle 3.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      width: 100%;
+    }
+
+    .btnTwenty{
+      width: 25% !important;
+    }
+    .imgFifty{
+      width: 50% !important;
+    }
+}
