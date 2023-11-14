@@ -55,7 +55,7 @@ export const getUserStories = async (userId) => {
 }
 
 export const editStory = async (storyTag, token) => {
-    const res = await instance.put(`/edit/${storyTag}`,
+    const res = await instance.put(`/api/v1/story/edit/${storyTag}`,
         {
             headers: { Authorization: `Bearer ${token}` }
         })
@@ -63,15 +63,15 @@ export const editStory = async (storyTag, token) => {
 }
 
 export const addStory = async (userId, token) => {
-    const res = await instance.post(`/add-story/${userId}`,
+    const res = await instance.post(`/api/v1/story/add-story/${userId}`,
         {
             headers: { Authorization: `Bearer ${token}` }
         })
     return res
 }
 
-export const deleteStory = async (storyTag, token) => {
-    const res = await instance.delete(`/delete/${storyTag}`,
+export const deleteStory = async (storyId, token) => {
+    const res = await instance.delete(`/api/v1/story/delete/${storyId}`,
         {
             headers: { Authorization: `Bearer ${token}` }
         })

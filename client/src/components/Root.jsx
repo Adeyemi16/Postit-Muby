@@ -6,7 +6,7 @@ const Root = () => {
   return (
     <>
       <Navbar />
-      <main style={{ minHeight: "80vh", paddingTop: "3.1rem" }}>
+      <main style={{ minHeight: "80vh", paddingTop: "3.1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Outlet />
       </main>
       <Footer />

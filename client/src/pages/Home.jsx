@@ -1,6 +1,7 @@
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { useStore } from "../config/store";
 import PageLayout from "../components/PageLayout";
+import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
   });
   return (
     <PageLayout>
-      <Container >
+      <Container>
         <div className="d-flex justify-content-lg-between flex-lg-row flex-column-reverse">
           <Col>
             <h2 className="fs-1 fw-bold">
@@ -26,10 +27,15 @@ export default function Home() {
               Perferendis, ea!
             </p>
             <Row className="gap-2">
-              <Button className="btnTwenty" style={{ backgroundColor: "#0086B0" }}>
+              <Button
+                className="btnTwenty"
+                style={{ backgroundColor: "#0086B0" }}
+                as={NavLink}
+                to={`/${currentUser?.user?.username.toLowerCase()}/stories`}
+              >
                 My Stories
               </Button>
-              <Button className="btnTwenty" variant="outline-primary">
+              <Button className="btnTwenty" variant="outline-primary" as={NavLink}>
                 Go to Feed
               </Button>
             </Row>
