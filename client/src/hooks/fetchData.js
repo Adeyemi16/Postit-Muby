@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 
 export default function useFetchData(url, options, token) {
     const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function useFetchData(url, options, token) {
                 setError(error)
             }
             finally {
-                setLoading(true)
+                setLoading(false)
             }
         }
         fetchData()

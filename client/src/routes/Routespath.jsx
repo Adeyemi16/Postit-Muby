@@ -1,7 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error, Root } from "../components";
 import {
-  Home, Landing, MyStories, Profile, Story
+  Home,
+  Landing,
+  MyStories,
+  Profile,
+  Story,
+  CreateStories,
 } from "../pages";
 import ProtectedRoutes from "./ProtectedRoutes";
 
@@ -29,7 +34,15 @@ export default function Routespath() {
           element: (
             <ProtectedRoutes>
               <MyStories />
-            </ProtectedRoutes> 
+            </ProtectedRoutes>
+          ),
+        },
+        {
+          path: "new-story",
+          element: (
+            <ProtectedRoutes>
+              <CreateStories />
+            </ProtectedRoutes>
           ),
         },
         {

@@ -44,30 +44,34 @@ export default function MyStories() {
       ) : (
         <>
           <div
-            className="flex flex-col h-auto justify-evenly gap-7 relative"
-            style={{ width: "100%", height: "100%" }}
+            className="d-flex flex-column h-auto justify-content-evenly gap-5 position-relative"
+            style={{ width: "90vw", height: "100%" }}
           >
             <div
               id="heading"
-              className="flex justify-between items-center"
+              className="d-flex justify-content-between align-items-center"
               style={{ width: "100%" }}
             >
-              <p className="text-3xl font-semibold">My tasks</p>
+              <p className="fs-3 font-bold">My stories</p>
               <NavLink
-                className="flex text-purple-600 h-4"
-                style={{ alignItems: "center", gap: "4px" }}
-                to={"/new-task"}
+                className="d-flex text-purple-600 h-4"
+                style={{
+                  alignItems: "center",
+                  gap: "4px",
+                  justifyContent: "center",
+                }}
+                to={"/new-story"}
               >
                 <AiOutlinePlus />
-                <p className="text-xl">Add new task</p>
+                <p style={{ marginBottom: "0" }}>Add new Story</p>
               </NavLink>
             </div>
             {data?.length < 1 ? (
               <div
-                className="items-center justify-center h-max absolute flex flex-col gap-4 top-3/4"
-                style={{ top: "700%", width: "100%" }}
+                className="align-items-center justify-content-center position-absolute d-flex flex-column gap-4 top-75"
+                style={{ top: "300%", width: "100%" }}
               >
-                <p className="font-semibold text-3xl">No task yet</p>
+                <p className="fw-bold fs-2">No story yet</p>
                 <PiNotepadDuotone size={"50px"} />
                 <NavLink to={"/"} style={{ textDecorationLine: "underline" }}>
                   Go back home
@@ -94,7 +98,7 @@ export default function MyStories() {
                     >
                       <div
                         id="tag"
-                        className="flex justify-between px-2 py-2"
+                        className="d-flex justify-content-between px-2 py-2"
                         style={{ alignItems: "center" }}
                       >
                         <p
